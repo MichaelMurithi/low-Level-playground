@@ -53,8 +53,30 @@ int assignment_operator_problem(){
     return 0;
 }
 
+/*
+The output of this program is:
+- I am 7
+- I am 10
+* Default case executes if no other case in switch matches, irrespective of its position in the switch.
+- The issue is due to a missing Break statement in case 15.
+*/
+int switch_default_issue(){
+    int n = 15;
+    switch(n){
+    default:
+        printf("I am default \n");
+    case 15:
+        printf("I am 7 \n");
+    case 10:
+        printf("I am 10");
+    }
+    return 0;
+}
+
 int main(){
 //    unsigned_variable_problem();
 //    switch_variable_problem();
-    assignment_operator_problem();
+//    assignment_operator_problem();
+    switch_default_issue();
+
 }
